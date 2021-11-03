@@ -5,15 +5,19 @@ import africa.semicolon.dtos.Requests.AddPackageRequest;
 import africa.semicolon.dtos.Responses.AddPackageResponse;
 import africa.semicolon.services.PackageService;
 import africa.semicolon.services.PackageServiceImpl;
+import org.springframework.web.bind.annotation.*;
 
+@RestController
 public class PackageController {
     private final PackageService packageService = new PackageServiceImpl();
 
-    public AddPackageResponse addPackage(AddPackageRequest addPackageRequest){
+    @PostMapping("/api/addpackage")
+    public AddPackageResponse addPackage(@RequestBody AddPackageRequest addPackageRequest){
         return packageService.addPackage(addPackageRequest);
     }
 
-    public Package findPackageById(Integer trackingId){
+    @GetMapping("/api/package/{id}")
+    public Package findPackageById(Integer trackingId, @PathVariable String id){
         return packageService.findPackageById(trackingId);
     }
 }
