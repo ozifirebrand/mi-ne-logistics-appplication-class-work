@@ -1,5 +1,6 @@
 package africa.semicolon.services;
 
+import africa.semicolon.data.models.Package;
 import africa.semicolon.data.repositories.PackageRepository;
 import africa.semicolon.data.repositories.PackageRepositoryImpl;
 import africa.semicolon.dtos.Requests.AddPackageRequest;
@@ -10,6 +11,25 @@ public class PackageServiceImpl implements PackageService{
 
     @Override
     public AddPackageResponse addPackage(AddPackageRequest addPackageRequest) {
+        // convert addPackage Request to a package
+        Package aPackage = new Package();
+        aPackage.setName(addPackageRequest.getPackageDescription());
+        aPackage.setDeliveryAddress(addPackageRequest.getReceiverAddress());
+        aPackage.setSenderPhone(addPackageRequest.getSenderPhone());
+        aPackage.setSenderName(addPackageRequest.getSenderName());
+        aPackage.setReceiverPhone(addPackageRequest.getReceiverPhoneNumber());
+        aPackage.setReceiverName(addPackageRequest.getReceiverName());
+        aPackage.setNetWeight(addPackageRequest.getPackageWeight());
+
+
+        // save package
+        Package savedPackage = packageRepository.save(aPackage);
+
+
+        // convert saved package to addPackage response
+
+
+        // return converted response
         return null;
     }
 }
