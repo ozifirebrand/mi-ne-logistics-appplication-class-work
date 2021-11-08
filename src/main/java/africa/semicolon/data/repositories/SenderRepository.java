@@ -11,4 +11,5 @@ public interface SenderRepository {
     void delete (Sender sender);
     void delete(String email);
     List<Sender> findAll();
+    void deleteAll();
 }
