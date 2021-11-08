@@ -1,7 +1,10 @@
 package africa.semicolon.utils;
 
 import africa.semicolon.data.models.Package;
+import africa.semicolon.data.models.Sender;
+import africa.semicolon.dtos.RegisterSenderResponse;
 import africa.semicolon.dtos.Requests.AddPackageRequest;
+import africa.semicolon.dtos.Requests.RegisterSenderRequest;
 import africa.semicolon.dtos.Responses.AddPackageResponse;
 
 public class ModelMapper {
@@ -23,6 +26,20 @@ public class ModelMapper {
         response.setPackageWeight(savedPackage.getNetWeight());
         response.setReceiverPhone(savedPackage.getReceiverPhone());
         response.setTrackingId(savedPackage.getTrackingId());
+        return response;
+    }
+
+    public static Sender map(RegisterSenderRequest registerSenderRequest){
+        Sender sender = new Sender();
+        sender.setSenderName(registerSenderRequest.getSenderName());
+        sender.setPhoneNumber(registerSenderRequest.getPhoneNumber());
+        sender.setEmailAddress(registerSenderRequest.getSenderEmail());
+        return sender;
+    }
+
+    public static RegisterSenderResponse map(Sender sender){
+        RegisterSenderResponse response = new RegisterSenderResponse();
+        response.setSenderEmail(sender.getEmailAddress());
         return response;
     }
 }
