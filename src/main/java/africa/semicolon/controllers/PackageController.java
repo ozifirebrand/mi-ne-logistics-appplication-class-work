@@ -17,7 +17,7 @@ public class PackageController {
     }
 
     @GetMapping("/api/package/{id}")
-    public Package findPackageById(Integer trackingId, @PathVariable String id){
+    public Package findPackageById(@PathVariable("id") Integer trackingId){
         return packageService.findPackageById(trackingId);
     }
 }
