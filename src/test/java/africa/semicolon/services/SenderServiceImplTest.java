@@ -25,6 +25,7 @@ class SenderServiceImplTest {
     @Test
     void registerSender(){
         RegisterSenderResponse response = registerSenderTestHelper();
+//        assertEquals(response.getSenderEmail(), registerSenderTestHelper().getSenderEmail());
         assertEquals(1, senderService.getSenders().size());
     }
 
