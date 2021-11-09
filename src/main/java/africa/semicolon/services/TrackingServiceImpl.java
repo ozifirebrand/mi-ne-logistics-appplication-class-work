@@ -22,6 +22,9 @@ public class TrackingServiceImpl implements TrackingService {
         // find previous tracking info;
 
         Optional<TrackingInformation> optionalInfo = trackingRepo.findByPackageId(addTrackingInfoRequest.getPackageId());
+
+        // if it exists, add new event and save;
+        //else create new tracking info, add new event
         if ( optionalInfo.isPresent() ){
             optionalInfo.get().getTrackingData().add(trackingData);
             trackingRepo.save(optionalInfo.get());
@@ -32,10 +35,19 @@ public class TrackingServiceImpl implements TrackingService {
             trackingInformation.getTrackingData().add(trackingData);
             TrackingInformation response = trackingRepo.save(trackingInformation);
         }
-        // if it exists, add new event and save;
-        //else create new tracking info, add new event
+
+//        trackingInfoResponse.setPackageId(trac);
+
         //convert saved tracking info to response dto
+        AddTrackingInfoResponse trackingInfoResponse = new AddTrackingInfoResponse();
+        trackingInfoResponse.setDateTime(trackingData.getDateTimeOfEvent());
+        trackingInfoResponse.setEvent(trackingData.getEvent());
         //return response dto
-        return null;
+        return trackingInfoResponse;
+    }
+
+    @Override
+    public TrackingInformation trackPackage(Integer packageId) {
+        return trackingRepo.findByPackageId(packageId).get();
     }
 }
