@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Optional;
+
 @RestController
 public class SenderController {
     private final SenderService senderService = new SenderServiceImpl();
@@ -19,7 +21,7 @@ public class SenderController {
     }
 
     @GetMapping("api/v1/sender/{email}")
-    public Sender getSender(@PathVariable String email){
+    public Optional<Sender> getSender(@PathVariable String email){
         return senderService.findSenderByEmail(email);
     }
 }
