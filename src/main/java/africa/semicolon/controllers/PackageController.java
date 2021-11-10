@@ -1,9 +1,9 @@
 package africa.semicolon.controllers;
 
 import africa.semicolon.data.models.Package;
-import africa.semicolon.dtos.Requests.AddPackageRequest;
-import africa.semicolon.dtos.Responses.AddPackageResponse;
-import africa.semicolon.exceptions.SenderDoesNotExistException;
+import africa.semicolon.utils.dtos.Requests.AddPackageRequest;
+import africa.semicolon.utils.dtos.Responses.AddPackageResponse;
+import africa.semicolon.utils.exceptions.SenderDoesNotExistException;
 import africa.semicolon.services.PackageService;
 import africa.semicolon.services.PackageServiceImpl;
 import org.springframework.http.HttpStatus;

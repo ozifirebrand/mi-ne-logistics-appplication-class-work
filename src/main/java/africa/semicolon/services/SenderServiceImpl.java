@@ -3,9 +3,9 @@ package africa.semicolon.services;
 import africa.semicolon.data.models.Sender;
 import africa.semicolon.data.repositories.SenderRepository;
 import africa.semicolon.data.repositories.SenderRepositoryImpl;
-import africa.semicolon.dtos.RegisterSenderResponse;
-import africa.semicolon.dtos.Requests.RegisterSenderRequest;
-import africa.semicolon.exceptions.DuplicateUserException;
+import africa.semicolon.utils.dtos.RegisterSenderResponse;
+import africa.semicolon.utils.dtos.Requests.RegisterSenderRequest;
+import africa.semicolon.utils.exceptions.DuplicateUserException;
 import africa.semicolon.utils.ModelMapper;
 
 import java.util.List;

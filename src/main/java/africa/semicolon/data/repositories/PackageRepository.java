@@ -7,8 +7,9 @@ import java.util.Optional;
 
 public interface PackageRepository {
     Package save(Package aPackage);
+    Package findPackageByTrackingNumber(Integer trackingNumber);
     List<Package> findAll();
     void delete(Package aPackage);
     void deleteByTrackingNumber(Integer trackingNumber);
-    Package findPackageByTrackingNumber(Integer trackingNumber);
 }
+//todo C= Save, R = Find

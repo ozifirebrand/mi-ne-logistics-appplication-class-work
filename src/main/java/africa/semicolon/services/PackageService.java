@@ -1,11 +1,9 @@
 package africa.semicolon.services;
 
 import africa.semicolon.data.models.Package;
-import africa.semicolon.dtos.Requests.AddPackageRequest;
-import africa.semicolon.dtos.Requests.AddTrackingInfoRequest;
-import africa.semicolon.dtos.Responses.AddPackageResponse;
+import africa.semicolon.utils.dtos.Requests.AddPackageRequest;
+import africa.semicolon.utils.dtos.Responses.AddPackageResponse;
 
-import java.util.Collection;
 import java.util.List;
 
 public interface PackageService {

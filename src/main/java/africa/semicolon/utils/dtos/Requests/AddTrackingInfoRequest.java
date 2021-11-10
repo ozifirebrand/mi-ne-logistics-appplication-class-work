@@ -1,8 +1,6 @@
-package africa.semicolon.dtos.Requests;
+package africa.semicolon.utils.dtos.Requests;
 
-import africa.semicolon.data.models.TrackingData;
 import lombok.Data;
-import lombok.RequiredArgsConstructor;
 
 @Data
 public class AddTrackingInfoRequest {

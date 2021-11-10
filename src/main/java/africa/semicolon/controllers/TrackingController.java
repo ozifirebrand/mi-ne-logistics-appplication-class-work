@@ -1,14 +1,14 @@
 package africa.semicolon.controllers;
 
 import africa.semicolon.data.models.TrackingInformation;
-import africa.semicolon.dtos.Requests.AddTrackingInfoRequest;
-import africa.semicolon.dtos.Responses.AddTrackingInfoResponse;
+import africa.semicolon.utils.dtos.Requests.AddTrackingInfoRequest;
+import africa.semicolon.utils.dtos.Responses.AddTrackingInfoResponse;
 import africa.semicolon.services.TrackingService;
 import africa.semicolon.services.TrackingServiceImpl;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-public class PackageTrackingController {
+public class TrackingController {
     private final TrackingService trackingService = new TrackingServiceImpl();
 
     @PatchMapping("/api/trackinginfo")

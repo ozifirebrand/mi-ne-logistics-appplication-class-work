@@ -4,9 +4,9 @@ import africa.semicolon.data.models.TrackingData;
 import africa.semicolon.data.models.TrackingInformation;
 import africa.semicolon.data.repositories.TrackingInformationRepository;
 import africa.semicolon.data.repositories.TrackingInformationRepositoryImpl;
-import africa.semicolon.dtos.Requests.AddTrackingInfoRequest;
-import africa.semicolon.dtos.Responses.AddTrackingInfoResponse;
-import africa.semicolon.exceptions.InvalidPackageIdException;
+import africa.semicolon.utils.dtos.Requests.AddTrackingInfoRequest;
+import africa.semicolon.utils.dtos.Responses.AddTrackingInfoResponse;
+import africa.semicolon.utils.exceptions.InvalidPackageIdException;
 
 import java.util.Optional;
 

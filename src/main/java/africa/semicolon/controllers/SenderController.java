@@ -1,8 +1,8 @@
 package africa.semicolon.controllers;
 
 import africa.semicolon.data.models.Sender;
-import africa.semicolon.dtos.RegisterSenderResponse;
-import africa.semicolon.dtos.Requests.RegisterSenderRequest;
+import africa.semicolon.utils.dtos.RegisterSenderResponse;
+import africa.semicolon.utils.dtos.Requests.RegisterSenderRequest;
 import africa.semicolon.services.SenderService;
 import africa.semicolon.services.SenderServiceImpl;
 import org.springframework.web.bind.annotation.GetMapping;

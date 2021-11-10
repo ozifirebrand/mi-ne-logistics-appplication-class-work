@@ -1,8 +1,8 @@
 package africa.semicolon.services;
 
-import africa.semicolon.dtos.RegisterSenderResponse;
-import africa.semicolon.dtos.Requests.RegisterSenderRequest;
-import africa.semicolon.exceptions.DuplicateUserException;
+import africa.semicolon.utils.dtos.RegisterSenderResponse;
+import africa.semicolon.utils.dtos.Requests.RegisterSenderRequest;
+import africa.semicolon.utils.exceptions.DuplicateUserException;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

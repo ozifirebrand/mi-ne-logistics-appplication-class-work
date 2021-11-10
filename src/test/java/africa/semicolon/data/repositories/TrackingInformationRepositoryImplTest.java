@@ -26,7 +26,7 @@ class TrackingInformationRepositoryImplTest {
     void save() {
         TrackingInformation trackingInformation = new TrackingInformation();
         trackingInformation.setPackageId(7);
-        TrackingData trackingData = new TrackingData();
+        TrackingData trackingData = new TrackingData("y");
         trackingData.setEvent("Ready for dispatch");
         trackingInformation.getTrackingData().add(trackingData);
 
@@ -37,7 +37,7 @@ class TrackingInformationRepositoryImplTest {
     public TrackingInformation saveTestHelper(){
         TrackingInformation trackingInformation = new TrackingInformation();
         trackingInformation.setPackageId(7);
-        TrackingData trackingData = new TrackingData();
+        TrackingData trackingData = new TrackingData("u");
         trackingData.setEvent("Ready for dispatch");
         trackingInformation.getTrackingData().add(trackingData);
 

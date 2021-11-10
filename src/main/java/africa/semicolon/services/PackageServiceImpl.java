@@ -4,10 +4,8 @@ import africa.semicolon.data.models.Package;
 import africa.semicolon.data.models.Sender;
 import africa.semicolon.data.repositories.PackageRepository;
 import africa.semicolon.data.repositories.PackageRepositoryImpl;
-import africa.semicolon.dtos.Requests.AddPackageRequest;
-import africa.semicolon.dtos.Requests.AddTrackingInfoRequest;
-import africa.semicolon.dtos.Responses.AddPackageResponse;
-import africa.semicolon.utils.ModelMapper.*;
+import africa.semicolon.utils.dtos.Requests.AddPackageRequest;
+import africa.semicolon.utils.dtos.Responses.AddPackageResponse;
 
 import java.util.List;
 import java.util.Optional;

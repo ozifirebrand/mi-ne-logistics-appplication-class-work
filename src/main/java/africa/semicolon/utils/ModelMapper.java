@@ -2,10 +2,10 @@ package africa.semicolon.utils;
 
 import africa.semicolon.data.models.Package;
 import africa.semicolon.data.models.Sender;
-import africa.semicolon.dtos.RegisterSenderResponse;
-import africa.semicolon.dtos.Requests.AddPackageRequest;
-import africa.semicolon.dtos.Requests.RegisterSenderRequest;
-import africa.semicolon.dtos.Responses.AddPackageResponse;
+import africa.semicolon.utils.dtos.RegisterSenderResponse;
+import africa.semicolon.utils.dtos.Requests.AddPackageRequest;
+import africa.semicolon.utils.dtos.Requests.RegisterSenderRequest;
+import africa.semicolon.utils.dtos.Responses.AddPackageResponse;
 
 public class ModelMapper {
     public static Package map(AddPackageRequest addPackageRequest){

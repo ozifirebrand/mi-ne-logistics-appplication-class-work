@@ -1,8 +1,8 @@
 package africa.semicolon.services;
 
-import africa.semicolon.dtos.Requests.AddPackageRequest;
-import africa.semicolon.dtos.Responses.AddPackageResponse;
-import africa.semicolon.exceptions.DuplicatePackageIdException;
+import africa.semicolon.utils.dtos.Requests.AddPackageRequest;
+import africa.semicolon.utils.dtos.Responses.AddPackageResponse;
+import africa.semicolon.utils.exceptions.DuplicatePackageIdException;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
