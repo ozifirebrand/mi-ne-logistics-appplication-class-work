@@ -11,5 +11,7 @@ public interface PackageRepository {
     List<Package> findAll();
     void delete(Package aPackage);
     void deleteByTrackingNumber(Integer trackingNumber);
+
+    void deleteAll();
 }
 //todo C= Save, R = Find

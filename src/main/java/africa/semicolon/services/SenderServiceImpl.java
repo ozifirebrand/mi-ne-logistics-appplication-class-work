@@ -3,10 +3,10 @@ package africa.semicolon.services;
 import africa.semicolon.data.models.Sender;
 import africa.semicolon.data.repositories.SenderRepository;
 import africa.semicolon.data.repositories.SenderRepositoryImpl;
-import africa.semicolon.utils.dtos.RegisterSenderResponse;
+import africa.semicolon.utils.dtos.Responses.RegisterSenderResponse;
 import africa.semicolon.utils.dtos.Requests.RegisterSenderRequest;
 import africa.semicolon.utils.exceptions.DuplicateUserException;
-import africa.semicolon.utils.ModelMapper;
+import africa.semicolon.utils.mapper.ModelMapper;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,7 +15,8 @@ public class SenderServiceImpl implements SenderService{
     private static final SenderRepository senderRepository = new SenderRepositoryImpl();
     @Override
     public RegisterSenderResponse registerSender(RegisterSenderRequest registerSenderRequest) {
-        Optional<Sender> savedSender = senderRepository.findSenderByEmail(registerSenderRequest.getSenderEmail());
+        Optional<Sender> savedSender = senderRepository.findSenderByEmail
+                (registerSenderRequest.getSenderEmail());
         if ( savedSender.isPresent() ) throw new DuplicateUserException
                 ("Email"+ registerSenderRequest.getSenderEmail()+ "already exists");
         //save

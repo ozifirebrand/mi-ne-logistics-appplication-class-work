@@ -25,15 +25,7 @@ class PackageServiceImplTest {
 
     @Test
     void addPackage() {
-        AddPackageRequest addPackageRequest = new AddPackageRequest();
-        addPackageRequest.setPackageWeight(43.5);
-        addPackageRequest.setPackageDescription("Whatever");
-        addPackageRequest.setReceiverAddress("Wherever");
-        addPackageRequest.setReceiverPhoneNumber("8504883");
-        addPackageRequest.setReceiverName("Waje");
-
-        AddPackageResponse addPackageResponse = packageService.addPackage(addPackageRequest);
-        assertEquals(addPackageResponse.getPackageWeight(), addPackageRequest.getPackageWeight());
+        AddPackageResponse addPackageResponse = addPackageTest();
         assertEquals(1, packageService.getAllPackages().size());
     }
 
@@ -47,10 +39,9 @@ class PackageServiceImplTest {
         addPackageRequest.setReceiverName("Waje");
         return packageService.addPackage(addPackageRequest);
     }
-
-    @Test
-    void findPackageById() {
-        addPackageTest();
-        assertThrows(DuplicatePackageIdException.class, ()-> addPackageTest());
-    }
+//    @Test
+//    void findPackageById() {
+//        addPackageTest();
+//        assertThrows(DuplicatePackageIdException.class, ()-> addPackageTest());
+//    }
 }

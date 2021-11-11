@@ -42,6 +42,11 @@ public class PackageRepositoryImpl implements PackageRepository {
     }
 
     @Override
+    public void deleteAll() {
+        database.clear();
+    }
+
+    @Override
     public Package findPackageByTrackingNumber(Integer trackingId) {
         return database.get(trackingId);
     }

@@ -1,8 +1,8 @@
-package africa.semicolon.utils;
+package africa.semicolon.utils.mapper;
 
 import africa.semicolon.data.models.Package;
 import africa.semicolon.data.models.Sender;
-import africa.semicolon.utils.dtos.RegisterSenderResponse;
+import africa.semicolon.utils.dtos.Responses.RegisterSenderResponse;
 import africa.semicolon.utils.dtos.Requests.AddPackageRequest;
 import africa.semicolon.utils.dtos.Requests.RegisterSenderRequest;
 import africa.semicolon.utils.dtos.Responses.AddPackageResponse;

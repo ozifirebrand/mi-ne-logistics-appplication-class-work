@@ -1,7 +1,7 @@
 package africa.semicolon.controllers;
 
 import africa.semicolon.data.models.Sender;
-import africa.semicolon.utils.dtos.RegisterSenderResponse;
+import africa.semicolon.utils.dtos.Responses.RegisterSenderResponse;
 import africa.semicolon.utils.dtos.Requests.RegisterSenderRequest;
 import africa.semicolon.services.SenderService;
 import africa.semicolon.services.SenderServiceImpl;

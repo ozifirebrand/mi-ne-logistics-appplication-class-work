@@ -1,6 +1,6 @@
 package africa.semicolon.services;
 
-import africa.semicolon.utils.dtos.RegisterSenderResponse;
+import africa.semicolon.utils.dtos.Responses.RegisterSenderResponse;
 import africa.semicolon.utils.dtos.Requests.RegisterSenderRequest;
 import africa.semicolon.utils.exceptions.DuplicateUserException;
 import org.junit.jupiter.api.AfterEach;
@@ -25,7 +25,6 @@ class SenderServiceImplTest {
     @Test
     void registerSender(){
         RegisterSenderResponse response = registerSenderTestHelper();
-//        assertEquals(response.getSenderEmail(), registerSenderTestHelper().getSenderEmail());
         assertEquals(1, senderService.getSenders().size());
     }
 
