@@ -39,9 +39,4 @@ class PackageServiceImplTest {
         addPackageRequest.setReceiverName("Waje");
         return packageService.addPackage(addPackageRequest);
     }
-//    @Test
-//    void findPackageById() {
-//        addPackageTest();
-//        assertThrows(DuplicatePackageIdException.class, ()-> addPackageTest());
-//    }
 }

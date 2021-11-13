@@ -42,9 +42,4 @@ public class PackageServiceImpl implements PackageService{
         return packageRepository.findAll();
     }
 
-    @Override
-    public Package findPackageWithMy(Integer packageId) {
-        return null;
-    }
-
 }

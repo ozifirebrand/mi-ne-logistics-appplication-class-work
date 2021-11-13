@@ -14,5 +14,5 @@ public interface PackageService {
 
     List<Package> getAllPackages();
 
-    Package findPackageWithMy(Integer packageId);
+//    Package findPackageWithMy(Integer packageId);
 }
