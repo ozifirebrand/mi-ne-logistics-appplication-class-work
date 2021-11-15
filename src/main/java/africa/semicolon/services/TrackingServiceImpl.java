@@ -16,8 +16,8 @@ public class TrackingServiceImpl implements TrackingService {
     @Override
     public AddTrackingInfoResponse updateTrackingInfo(AddTrackingInfoRequest addTrackingInfoRequest) {
         //verify package id is correct
-        var aPackage = packageService.findPackageWithMy(addTrackingInfoRequest.getPackageId());
-        if ( aPackage==null ) throw new InvalidPackageIdException("Package id is missing");
+//        var aPackage = packageService.findPackageWithMy(addTrackingInfoRequest.getPackageId());
+//        if ( aPackage==null ) throw new InvalidPackageIdException("Package id is missing");
         TrackingData trackingData = new TrackingData(addTrackingInfoRequest.getEvent());
         // find previous tracking info;
 
